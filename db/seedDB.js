@@ -1,12 +1,12 @@
 const { Pool } = require("pg");
 const { faker } = require("@faker-js/faker");
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+
+const { POSTGRES_URL } = process.env;
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "ABZREST",
-  password: "1903",
-  port: 5432,
+  connectionString: POSTGRES_URL,
 });
 
 // Seed positions first

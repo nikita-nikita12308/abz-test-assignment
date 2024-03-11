@@ -14,6 +14,9 @@ const isValidPosition = async (value, { req }) => {
 };
 
 const isValidImage = async (value, { req }) => {
+  if (!req.file) {
+    throw new Error("Image is required.");
+  }
   if (
     !(req.file.mimetype === "image/jpg" || req.file.mimetype === "image/jpeg")
   ) {

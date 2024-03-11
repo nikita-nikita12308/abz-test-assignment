@@ -1,10 +1,11 @@
 const pgp = require("pg-promise");
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+
+const { POSTGRES_URL } = process.env;
+
 const connection = {
-  user: "postgres",
-  password: "1903",
-  host: "localhost",
-  port: 5432,
-  database: "ABZREST",
+  connectionString: POSTGRES_URL,
 };
 
 const pg = pgp();

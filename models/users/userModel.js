@@ -54,7 +54,7 @@ class UserModel {
   async getUsers(limit, offset) {
     try {
       const result = await db.manyOrNone(
-        "SELECT u.id, u.name, u.email, u.phone, positions.name AS position, u.position_id, u.registration_timestamp, u.photo FROM users u JOIN positions ON u.position_id = positions.id ORDER BY registration_timestamp LIMIT $1 OFFSET $2",
+        "SELECT u.id, u.name, u.email, u.phone, positions.name AS position, u.position_id, u.registration_timestamp, u.photo FROM users u JOIN positions ON u.position_id = positions.id ORDER BY registration_timestamp DESC LIMIT $1 OFFSET $2",
         [limit, offset]
       );
       return result;

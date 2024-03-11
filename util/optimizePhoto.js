@@ -1,4 +1,3 @@
-const fs = require("fs").promises;
 const sharp = require("sharp");
 const tinify = require("tinify");
 tinify.key = process.env.TINYFY_API_KEY;

@@ -5,7 +5,6 @@ const tokenController = require("../controllers/tokenController");
 
 const checkToken = (req, res, next) => {
   const token = req.header("Token");
-  console.log(token);
   if (!token) {
     return res.status(401).json({
       success: false,
@@ -21,7 +20,6 @@ const checkToken = (req, res, next) => {
     }
 
     const tokenKey = decoded ? decoded.tokenKey : null;
-    console.log(tokenController.oneTimeTokens.get(tokenKey));
     if (tokenKey && tokenController.oneTimeTokens.get(tokenKey)) {
       tokenController.oneTimeTokens.delete(tokenKey);
       next();
