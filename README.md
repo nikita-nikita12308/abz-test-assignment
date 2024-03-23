@@ -1,5 +1,4 @@
-Test assignment for Back-end Developer (Node.js)
-Task - https://apidocs.abz.dev/test_assignment_for_frontend_developer_api_documentation
+Project simple REST API server
 
 Node.js, express.js, PostgreSQL
 
