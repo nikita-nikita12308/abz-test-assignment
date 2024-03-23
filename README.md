@@ -1,4 +1,4 @@
-Project simple REST API server
+Simple REST API server
 
 Node.js, express.js, PostgreSQL
 
