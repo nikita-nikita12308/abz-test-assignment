@@ -2,7 +2,7 @@ Simple REST API server
 
 Node.js, express.js, PostgreSQL
 
-API Link - https://abz-test-assignment.onrender.com/api/v1
+API Link - https://simple-rest-api-rho.vercel.app/api/v1
 
 GET /token - one-request token for auth
 
@@ -16,4 +16,4 @@ GET /users/{id} - user
 
 GET /positions - positions
 
-DEMO API - https://abz-test-assignment-demonstration.vercel.app/
+DEMO API - https://simple-rest-api-demonstration.vercel.app/
